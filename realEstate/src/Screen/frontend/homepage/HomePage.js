@@ -1,4 +1,4 @@
-import {View,StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import React from 'react';
 import {
   ScrollView,
@@ -11,12 +11,10 @@ import {
   Image,
   Badge,
   Heading,
-  
 } from 'native-base';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
-
-
+import Swiper from 'react-native-swiper';
 export default function HomePage() {
   return (
     <ScrollView style={Styles.flexContainer}>
@@ -51,22 +49,21 @@ export default function HomePage() {
           </Stack>
         </HStack>
         <HStack>
-        <Box>
+          <Box>
             <IconButton
               icon={
                 <Icon
                   as={FontAwesome5Icon}
                   name="user-circle"
                   size="md"
-                  color="#f75606"
+                  color="#0275d8"
                 />
               }
             />
           </Box>
-          
+
           <Box>
             <IconButton
-             
               icon={
                 <Icon
                   as={MaterialIcons}
@@ -88,7 +85,7 @@ export default function HomePage() {
           <View>
             <Image
               source={{
-                uri: 'https://icms-image.slatic.net/images/ims-web/c423e8db-cb5f-44ec-baa8-0e5941de7971.jpg_1200x1200.jpg',
+                uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqguznmFobK0_MLU-BSoZuxdcyeLxsLFDoEQ&usqp=CAU',
               }}
               alt="slider"
               style={{height: '100%'}}
@@ -97,7 +94,16 @@ export default function HomePage() {
           <View>
             <Image
               source={{
-                uri: 'https://daraz-app-73432.web.app/static/media/pic4.1e109436af5b9878655c.jpg',
+                uri: 'https://stylesatlife.com/wp-content/uploads/2021/02/Flat-roof-house-designs-2.jpg.webp',
+              }}
+              alt="slider"
+              style={{height: '100%'}}
+            />
+          </View>
+          <View>
+            <Image
+              source={{
+                uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzrCZZDDFYuYI2O5TL_SZk2JhOpiqKmQJzMw&usqp=CAU',
               }}
               alt="slider"
               style={{height: '100%'}}
@@ -105,14 +111,15 @@ export default function HomePage() {
           </View>
         </Swiper>
       </Box>
-   
     </ScrollView>
-  )
+  );
 }
 const Styles = StyleSheet.create({
   flexContainer: {
     flex: 1,
   },
+  wrapper: {},
+
   slide: {
     flex: 1,
     justifyContent: 'center',
